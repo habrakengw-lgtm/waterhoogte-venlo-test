@@ -221,7 +221,7 @@ async function fetchCalculated(){
 }
 
 async function fetchMeasured(){
-  const res  = await fetch('https://rws-current.habraken-gw.workers.dev?t='+Date.now());
+  const res  = await fetch('https://rws-current-test.habraken-gw.workers.dev?t='+Date.now());
   if(!res.ok) return [];
   const body = await res.json().catch(()=>[]);
   if(body.error||!Array.isArray(body)) return [];
